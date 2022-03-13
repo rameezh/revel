@@ -16,11 +16,8 @@ class Queue {
 
     removeById(userId) {
         console.log('Before Removal', this.q);
-        const index = this.q.map(x => {
-            return x.id;
-        }).indexOf(userId);
 
-        this.q.splice(index, 1);
+        this.q.splice(userId, 1);
 
         console.log('After removal', this.q);
 
@@ -60,6 +57,11 @@ class Queue {
 
     swap(p1, p2) {
         
+        if (this.q[p1] == undefined || this.q[p2] == undefined ) {
+            console.error("Swaping positions not exist");
+            return;
+        }
+
         console.log('Before swaping', this.q);
         const tempData = this.q[p1];
         this.q[p1] = this.q[p2];
@@ -78,7 +80,7 @@ class Queue {
         return;
     }
 
-    print() {
+    printData() {
         this.q.map(x => {
             console.log({ ...x });
             return;
@@ -86,18 +88,5 @@ class Queue {
     }
 
   }
-  
-  // define queue
-  const q1 = new Queue();
-  
-  q1.add({id: 1, name: 'rameez'});
-  q1.add({id: 2, name: 'mark'});
-  q1.add({ id: 3, name: 'Revel' });
 
-//   q1.removeById(2);
-//   q1.removeByPosition(1);
-
-//   q1.reverse();
-//   q1.swap(1,2);
-    q1.print()
-//   q1.move(0,2);
+  module.exports = Queue;

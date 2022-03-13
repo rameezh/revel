@@ -1,0 +1,19 @@
+{
+  "name": "revel",
+  "version": "1.0.0",
+  "description": "Revel assesment",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rameezh/revel.git"
+  },
+  "author": "Rameez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rameezh/revel/issues"
+  },
+  "homepage": "https://github.com/rameezh/revel#readme"
+}
